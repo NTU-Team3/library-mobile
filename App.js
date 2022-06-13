@@ -5,13 +5,13 @@ import BlockCard from "./app/components/BlockCard";
 import FeaturedNews from "./app/components/FeaturedNews";
 import BreakingNews from "./app/components/BreakingNews";
 import data from "./fakeData";
-import TechNews from "./app/components/TechNews";
+import Technical from "./app/components/Technical";
 import PoliticalBook from "./app/components/PoliticalBook";
 import Fiction from "./app/components/Fiction";
 
 export default function App() {
   const breakingNews = data.filter((item) => item.category === "breaking-news");
-  const techNews = data.filter((item) => item.category === "tech");
+  const techBooks = data.filter((item) => item.category === "tech");
   const political = data.filter((item) => item.category === "political");
   const fiction = data.filter((item) => item.category === "fiction");
   const topNew = {
@@ -27,7 +27,7 @@ export default function App() {
       <SearchBar />
       <FeaturedNews item={topNew} />
       <BreakingNews data={breakingNews} />
-      <TechNews data={techNews} />
+      <Technical data={techBooks} />
       <PoliticalBook data={political} />
       <Fiction data={fiction} />
     </Screen>
