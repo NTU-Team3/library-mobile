@@ -10,6 +10,10 @@ import data from "../data/fakeData";
 import Technical from "./Technical";
 import PoliticalBook from "./PoliticalBook";
 import Fiction from "./Fiction";
+import Popular from "./Popular";
+import Greeting from "./Greetings";
+import ChipButtons from "./Chip";
+import CarouselCards from "./CarouselCards";
 
 export default function App() {
   const breakingNews = data.filter((item) => item.category === "breaking-news");
@@ -17,13 +21,13 @@ export default function App() {
   const political = data.filter((item) => item.category === "political");
   const fiction = data.filter((item) => item.category === "fiction");
 
+  const greeting = "Greetings, Charline";
   return (
     <Screen>
       <SearchBar />
-      <BreakingNews data={breakingNews} />
-      <Technical data={techBooks} />
-      <PoliticalBook data={political} />
-      <Fiction data={fiction} />
+      <Greeting>{greeting}</Greeting>
+      <ChipButtons />
+      <CarouselCards data={fiction} />
     </Screen>
   );
 }
