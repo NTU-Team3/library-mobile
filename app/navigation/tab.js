@@ -13,10 +13,10 @@ const Tabs = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarActiveTintColor: "#f0f",
+        tabBarActiveTintColor: "#FFCE45",
         tabBarInactiveTintColor: "#555",
-        tabBarActiveBackgroundColor: "#fff",
-        tabBarInactiveBackgroundColor: "#999",
+        tabBarActiveBackgroundColor: "#FFCE45",
+        tabBarInactiveBackgroundColor: "#222831",
       }}
     >
       <Tab.Screen
@@ -26,7 +26,7 @@ const Tabs = () => {
           tabBarIcon: () => (
             <Image
               source={require("../../assets/home.png")}
-              style={{ width: 20, height: 20 }}
+              style={{ width: 20, height: 20, tintColor: "white" }}
             />
           ),
         }}
@@ -38,7 +38,7 @@ const Tabs = () => {
           tabBarIcon: () => (
             <Image
               source={require("../../assets/book.png")}
-              style={{ width: 20, height: 20 }}
+              style={{ width: 20, height: 20, tintColor: "white" }}
             />
           ),
         }}
@@ -50,7 +50,7 @@ const Tabs = () => {
           tabBarIcon: () => (
             <Image
               source={require("../../assets/shopping-cart.png")}
-              style={{ width: 20, height: 20 }}
+              style={{ width: 20, height: 20, tintColor: "white" }}
             />
           ),
         }}
@@ -62,7 +62,7 @@ const Tabs = () => {
           tabBarIcon: () => (
             <Image
               source={require("../../assets/profile.png")}
-              style={{ width: 20, height: 20 }}
+              style={{ width: 20, height: 20, tintColor: "white" }}
             />
           ),
         }}
