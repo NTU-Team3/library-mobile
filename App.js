@@ -8,7 +8,9 @@ import data from "./fakeData";
 import Technical from "./app/components/Technical";
 import PoliticalBook from "./app/components/PoliticalBook";
 import Fiction from "./app/components/Fiction";
-
+import Login_page from "./containers/Login";
+import Register from "./containers/Register";
+import EditProfile from "./containers/EditProfile";
 export default function App() {
   const breakingNews = data.filter((item) => item.category === "breaking-news");
   const techBooks = data.filter((item) => item.category === "tech");
@@ -22,14 +24,5 @@ export default function App() {
       "http://books.google.com/books/content?id=QIMaviqqoQoC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
     category: "tech",
   };
-  return (
-    <Screen>
-      <SearchBar />
-      <FeaturedNews item={topNew} />
-      <BreakingNews data={breakingNews} />
-      <Technical data={techBooks} />
-      <PoliticalBook data={political} />
-      <Fiction data={fiction} />
-    </Screen>
-  );
+  return <EditProfile />;
 }
