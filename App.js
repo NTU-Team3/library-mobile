@@ -24,5 +24,5 @@ export default function App() {
       "http://books.google.com/books/content?id=QIMaviqqoQoC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
     category: "tech",
   };
-  return <EditProfile />;
+  return <Login_page />;
 }
