@@ -1,10 +1,17 @@
 import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
+import { View, TextInput, StyleSheet, Image } from "react-native";
 
 const SearchBar = () => {
   return (
     <View style={styles.container}>
-      <TextInput style={styles.searchInput} placeholder="Search here..." />
+      <View style={styles.searchbar}>
+        <Image
+          source={require("../../assets/home.png")}
+          style={{ width: 20, height: 20, tintColor: "white" }}
+        />
+
+        <TextInput style={styles.searchInput} placeholder="Search here..." />
+      </View>
     </View>
   );
 };
@@ -23,6 +30,10 @@ const styles = StyleSheet.create({
     height: "100%",
     paddingLeft: 8,
     fontSize: 18,
+  },
+  searchbar: {
+    flexDirection: "row",
+    marginLeft: 10,
   },
 });
 

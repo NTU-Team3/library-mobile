@@ -32,15 +32,22 @@ export default function HomeScreen() {
     switch (category) {
       case "political":
         setList(political);
+        setCategory(category);
         break;
       case "psychology":
         setList(psychology);
+        setCategory(category);
+
         break;
       case "technology":
         setList(technology);
+        setCategory(category);
+
         break;
       case "fiction":
         setList(fiction);
+        setCategory(category);
+
         break;
     }
   }
