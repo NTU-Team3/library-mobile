@@ -1,7 +1,7 @@
 import React from "react";
 import { Dimensions, StyleSheet, Image, View, Text, Alert } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import dataBook from "../../data/fakeDataBook";
+import dataBook from "../../data/fakeDataBook-ikoh";
 import bookImg from "../../../assets/book-covers/bcover_01.jpg";
 
 export default function ReadListScreenImg() {
@@ -10,7 +10,8 @@ export default function ReadListScreenImg() {
 
   const bookTitle = dataBook[1].title;
   const bookAuthor = dataBook[1].author;
-  const bookKeyInfo = dataBook[1].keyInfo;
+  const bookKeyInfo = dataBook[1].keyinfo;
+  const bookSummary = dataBook[1].summary;
 
   const backBtnPress = () => {
     Alert.alert(`Read Item - Back`);
@@ -24,6 +25,7 @@ export default function ReadListScreenImg() {
 
       <View style={styles.divHeader}>
         <Text style={styles.txtTitle}>{bookTitle}</Text>
+        <Text style={styles.txtKeyInfo}>{bookAuthor}</Text>
         <Text style={styles.txtKeyInfo}>{bookKeyInfo}</Text>
       </View>
     </View>
