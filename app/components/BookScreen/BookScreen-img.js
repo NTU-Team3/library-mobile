@@ -1,7 +1,7 @@
 import React from "react";
 import { Dimensions, StyleSheet, Image, View, Text, Alert } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import dataBook from "../../data/fakeDataBook";
+import dataBook from "../../data/fakeDataBook-ikoh";
 import bookImg from "../../../assets/book-covers/bcover_01.jpg";
 
 export default function BookScreenImg() {

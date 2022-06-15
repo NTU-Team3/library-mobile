@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, ScrollView, View, Text, Alert } from "react-native";
-import dataBook from "../../data/fakeDataBook";
+import dataBook from "../../data/fakeDataBook-ikoh";
 
 export default function BookScreenSynopsis() {
   const bookTitle = dataBook[1].title;

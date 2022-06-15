@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, ScrollView, View, Text } from "react-native";
-import dataBook from "../../data/fakeDataBook";
+import dataBook from "../../data/fakeDataBook-ikoh";
 
 export default function BookScreenReviews() {
   const bookReviews = dataBook[1].reviews;
