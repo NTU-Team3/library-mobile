@@ -1,27 +1,43 @@
 import React from "react";
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 
 export const SLIDER_WIDTH = Dimensions.get("window").width + 80;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
 const CarouselCardItem = ({ item, index }) => {
   return (
-    <View style={styles.container} key={index}>
+    <TouchableOpacity
+      onPress={
+        (onPressCarousel = () => {
+          Alert.alert(`${item.title} is pressed`);
+        })
+      }
+      style={styles.container}
+      key={index}
+    >
       <Image source={{ uri: item.thumbnail }} style={styles.image} />
       <Text style={styles.header}>{item.title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     marginTop: 20,
-    left: -50,
+    left: -60,
     backgroundColor: "white",
-    borderRadius: 12,
+    borderRadius: 18,
     width: ITEM_WIDTH,
-    height: 280,
-    paddingBottom: 30,
+    height: 290,
+    paddingBottom: 20,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -41,6 +57,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingLeft: 10,
     paddingTop: 10,
+    textAlign: "center",
   },
   body: {
     color: "#222",

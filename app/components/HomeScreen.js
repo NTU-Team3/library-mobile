@@ -15,19 +15,41 @@ import Greeting from "./Greetings";
 import ChipButtons from "./Chip";
 import CarouselCards from "./CarouselCards";
 
-export default function App() {
-  const breakingNews = data.filter((item) => item.category === "breaking-news");
-  const techBooks = data.filter((item) => item.category === "tech");
+export default function HomeScreen() {
+  const psychology = data.filter((item) => item.category === "psychology");
+  const technology = data.filter((item) => item.category === "technology");
   const political = data.filter((item) => item.category === "political");
   const fiction = data.filter((item) => item.category === "fiction");
 
   const greeting = "Greetings, Charline";
+  const [curList, setList] = React.useState(political);
+  const [category, setCategory] = React.useState("political");
+
+  function filter(catName) {
+    const category = catName.toLowerCase();
+    console.log(`filter function at homescreen: ${category}`);
+
+    switch (category) {
+      case "political":
+        setList(political);
+        break;
+      case "psychology":
+        setList(psychology);
+        break;
+      case "technology":
+        setList(technology);
+        break;
+      case "fiction":
+        setList(fiction);
+        break;
+    }
+  }
   return (
     <Screen>
       <SearchBar />
       <Greeting>{greeting}</Greeting>
-      <ChipButtons />
-      <CarouselCards data={fiction} />
+      <ChipButtons select={category} onChange={filter} />
+      <CarouselCards data={curList} />
     </Screen>
   );
 }

@@ -11,7 +11,7 @@ const CarouselCards = ({ data }) => {
   return (
     <View>
       <Carousel
-        layout="stack"
+        layout="tinder"
         layoutCardOffset={18}
         ref={isCarousel}
         data={data}
@@ -26,7 +26,7 @@ const CarouselCards = ({ data }) => {
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
-          top: -15,
+          top: 3,
           width: 10,
           height: 10,
           borderRadius: 5,
