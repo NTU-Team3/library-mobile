@@ -1,11 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import SearchBar from "./SearchBar";
+import SearchBar from "../components/SearchBar";
 import Screen from "./Screen";
 import data from "../data/fakeData";
-import Greeting from "./Greetings";
-import ChipButtons from "./Chip";
-import CarouselCards from "./CarouselCards";
+import Greeting from "../components/Greetings";
+import ChipButtons from "../components/Chip";
+import CarouselCards from "../components/CarouselCards";
 
 export default function HomeScreen() {
   const psychology = data.filter((item) => item.category === "psychology");

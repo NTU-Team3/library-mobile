@@ -1,10 +1,10 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import HomeScreen from "../components/HomeScreen";
-import ReadingScreen from "../components/Reading";
-import ProfileScreen from "../components/ProfileScreen";
+import HomeScreen from "../containers/HomeScreen";
+import ReadingScreen from "../containers/Reading";
+import ProfileScreen from "../containers/ProfileScreen";
 
-import CartScreen from "../components/CartScreen";
+import CartScreen from "../containers/CartScreen";
 import { Image } from "react-native";
 
 const Tab = createBottomTabNavigator();
