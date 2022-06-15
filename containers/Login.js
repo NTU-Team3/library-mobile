@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -7,15 +7,14 @@ import {
   View,
   Linking,
 } from "react-native";
-import { useForm } from "react-hook-form";
 
 import _Button from "../app/components/Button";
 import Background_Image from "../assets/login_page/background.png";
 
 const Login_page = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
   return (
     <>
       <ImageBackground
@@ -33,7 +32,6 @@ const Login_page = () => {
           >
             Register?
           </Text>
-
           <TextInput
             style={styles.input}
             placeholder="Enter your email"
@@ -49,43 +47,25 @@ const Login_page = () => {
             placeholderTextColor={"white"}
             onChangeText={setPassword}
           ></TextInput>
-
-          <_Button
-            buttonText="sign in"
-            func={() => {
-              if (email.trim() === "" || password.trim() === "") {
-                setError("Email and Password are required");
-              }
-              if (email.trim() === "") {
-                setError("Email is required");
-              }
-              if (password.trim() === "") {
-                setError("Email is required");
-              } else {
-                setError("");
-              }
+          <_Button buttonText="sign in" />
+        </View>
+        <View style={styles.lower}>
+          <Text
+            style={styles.lower__text}
+            onPress={() => {
+              Linking.openURL("http://google.com");
             }}
-          />
-          {error && <Text> {error} </Text>}
-
-          <View style={styles.lower}>
-            <Text
-              style={styles.lower__text}
-              onPress={() => {
-                Linking.openURL("http://google.com");
-              }}
-            >
-              Forgot password
-            </Text>
-            <Text
-              style={styles.lower__text}
-              onPress={() => {
-                alert("You tapped the button!");
-              }}
-            >
-              Continue as guest
-            </Text>
-          </View>
+          >
+            Forgot password
+          </Text>
+          <Text
+            style={styles.lower__text}
+            onPress={() => {
+              Linking.openURL("http://google.com");
+            }}
+          >
+            Continue as guest
+          </Text>
         </View>
       </ImageBackground>
     </>
@@ -121,8 +101,6 @@ const styles = StyleSheet.create({
   lower: {
     flexDirection: "row",
     width: "100%",
-    height: "100%",
-    alignItems: "flex-end",
     justifyContent: "space-around",
   },
   lower__text: {
