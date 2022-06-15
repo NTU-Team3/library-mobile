@@ -20,9 +20,15 @@ const Greeting = ({ children, numberOfLines = 1, size = 30 }) => {
 
 const styles = StyleSheet.create({
   datetime: {
-    marginTop: 10,
+    marginTop: 8,
     fontSize: 15,
     marginBottom: 30,
+  },
+  greeting: {
+    marginTop: 20,
+    fontFamily: "Roboto",
+    fontWeight: "bold",
+    fontSize: 30,
   },
 });
 

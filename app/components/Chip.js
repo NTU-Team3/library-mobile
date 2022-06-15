@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     justifyContent: "center",
     textAlign: "center",
-    fontFamily: "Verdana",
   },
   row: {
     marginTop: 2,
