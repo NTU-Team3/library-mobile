@@ -3,7 +3,7 @@ import { useFonts } from "expo-font";
 import AppLoading from "expo-app-loading";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
-const _Button = ({ buttonText, func }) => {
+const _Button = ({ buttonText }) => {
   let [fontsLoaded] = useFonts({
     InterRegular: require("../../assets/fonts/InterRegular.ttf"),
   });
@@ -12,7 +12,7 @@ const _Button = ({ buttonText, func }) => {
   }
   return (
     <>
-      <TouchableOpacity style={styles.button} onPress={func} title="Press Me">
+      <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>{buttonText}</Text>
       </TouchableOpacity>
     </>
