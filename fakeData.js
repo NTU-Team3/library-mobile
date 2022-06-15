@@ -5,7 +5,7 @@ export default [
     desc: "A NOVEL THAT READERS and critics have been eagerly anticipating for over a decade, Gilead is an asto...",
     thumbnail:
       "http://books.google.com/books/content?id=KQZCPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "breaking-news",
+    category: "fiction",
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ export default [
     desc: "A new 'Christie for Christmas' -- a full-length novel adapted from her acclaimed play by Charles Osb...",
     thumbnail:
       "http://books.google.com/books/content?id=gA5GPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "breaking-news",
+    category: "fiction",
   },
   {
     id: "3",
@@ -21,7 +21,7 @@ export default [
     desc: "Volume Two of Stephen Donaldson's acclaimed second trilogy featuing the compelling anti-hero Thomas ...",
     thumbnail:
       "http://books.google.com/books/content?id=OmQawwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "breaking-news",
+    category: "fiction",
   },
   {
     id: "4",
@@ -29,7 +29,7 @@ export default [
     desc: "A memorable, mesmerizing heroine Jennifer -- brilliant, beautiful, an attorney on the way up until t...",
     thumbnail:
       "http://books.google.com/books/content?id=FKo2TgANz74C&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "breaking-news",
+    category: "fiction",
   },
   {
     id: "5",
@@ -37,7 +37,7 @@ export default [
     desc: "Lewis' work on the nature of love divides love into four categories; Affection, Friendship, Eros and...",
     thumbnail:
       "http://books.google.com/books/content?id=XhQ5XsFcpGIC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "breaking-news",
+    category: "fiction",
   },
   {
     id: "6",
@@ -45,7 +45,7 @@ export default [
     desc: "A sweeping illustrated history of war and the implements used to perpetrate it takes readers on a fa...",
     thumbnail:
       "http://books.google.com/books/content?id=eoEagVTujdcC&printsec=frontcover&img=1&zoom=1&edge=curl&sou...",
-    category: "tech",
+    category: "technology",
   },
   {
     id: "7",
@@ -53,7 +53,7 @@ export default [
     desc: "Recounts the life and accomplishments of the Croatian-born engineer who developed alternating-curren...",
     thumbnail:
       "http://books.google.com/books/content?id=kFFWipanqsoC&printsec=frontcover&img=1&zoom=1&edge=curl&sou...",
-    category: "tech",
+    category: "technology",
   },
   {
     id: "8",
@@ -61,7 +61,7 @@ export default [
     desc: "Describes how the plow company got into the tractor business, and recounts the history of successive...",
     thumbnail:
       "http://books.google.com/books/content?id=Tp1xPQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "tech",
+    category: "technology",
   },
   {
     id: "9",
@@ -69,7 +69,7 @@ export default [
     desc: "In The Problem of Pain, C.S. Lewis, one of the most renowned Christian authors and thinkers, examin...",
     thumbnail:
       "http://books.google.com/books/content?id=Kk-uVe5QK-gC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
-    category: "breaking-news",
+    category: "psychology",
   },
   {
     id: "10",
@@ -77,7 +77,7 @@ export default [
     desc: "This updated edition utilizes visualization to present a complete, concise, and easy-to-understand e...",
     thumbnail:
       "http://books.google.com/books/content?id=hoKRpBF-5TEC&printsec=frontcover&img=1&zoom=1&edge=curl&sou...",
-    category: "tech",
+    category: "technology",
   },
   {
     id: "11",

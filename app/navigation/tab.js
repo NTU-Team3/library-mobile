@@ -1,4 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
 import HomeScreen from "../components/HomeScreen";
 import ReadingScreen from "../components/Reading";
 import ProfileScreen from "../components/ProfileScreen";
@@ -12,11 +13,15 @@ const Tabs = () => {
   return (
     <Tab.Navigator
       screenOptions={{
+        headerShown: false,
         tabBarShowLabel: false,
         tabBarActiveTintColor: "#FFCE45",
         tabBarInactiveTintColor: "#555",
         tabBarActiveBackgroundColor: "#FFCE45",
         tabBarInactiveBackgroundColor: "#222831",
+        height: "10%",
+        bottom: 0,
+        backgroundColor: "#FFFFFF",
       }}
     >
       <Tab.Screen
