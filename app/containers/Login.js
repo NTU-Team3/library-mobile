@@ -8,8 +8,8 @@ import {
   Linking,
 } from "react-native";
 
-import _Button from "../app/components/Button";
-import Background_Image from "../assets/login_page/background.png";
+import _Button from "../components/Button";
+import Background_Image from "../../assets/login_page/background.png";
 
 const Login_page = () => {
   const [email, setEmail] = React.useState("");

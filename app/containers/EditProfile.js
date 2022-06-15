@@ -1,8 +1,8 @@
 import { React, useState } from "react";
 import { StyleSheet, TextInput, View, Text } from "react-native";
 
-import _Button from "../app/components/Button";
-import Background_Image from "../assets/login_page/background.png";
+import _Button from "../components/Button";
+import Background_Image from "../../assets/login_page/background.png";
 
 const Login_page = () => {
   const [name, setName] = useState("Enter your preferred name");

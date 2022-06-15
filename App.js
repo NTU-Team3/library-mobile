@@ -8,9 +8,11 @@ import data from "./fakeData";
 import Technical from "./app/components/Technical";
 import PoliticalBook from "./app/components/PoliticalBook";
 import Fiction from "./app/components/Fiction";
-import Login_page from "./containers/Login";
-import Register from "./containers/Register";
-import EditProfile from "./containers/EditProfile";
+import Login_page from "./app/containers/Login";
+import Register from "./app/containers/Register";
+import EditProfile from "./app/containers/EditProfile";
+import { NavigationContainer } from "@react-navigation/native";
+import Tabs from "./app/navigation/tab";
 export default function App() {
   const breakingNews = data.filter((item) => item.category === "breaking-news");
   const techBooks = data.filter((item) => item.category === "tech");
@@ -24,5 +26,9 @@ export default function App() {
       "http://books.google.com/books/content?id=QIMaviqqoQoC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
     category: "tech",
   };
-  return <EditProfile />;
+  return (
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
+  );
 }
