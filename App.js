@@ -1,11 +1,7 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import Tabs from "./app/navigation/tab";
+import PresentationNavigator from "./app/routes/PresentationStack";
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tabs />
-    </NavigationContainer>
-  );
+export default function App({}) {
+  // This comes from /routes folder going into /containers folder
+  return <PresentationNavigator />;
 }
