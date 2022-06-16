@@ -3,8 +3,8 @@ import { View } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import CarouselCardItem, { SLIDER_WIDTH, ITEM_WIDTH } from "./CarouselCardItem";
 
-const CarouselCards = ({ data }) => {
-  const [index, setIndex] = React.useState(0);
+const CarouselCards = ({ data, ind = 0 }) => {
+  const [index, setIndex] = React.useState(ind);
   const isCarousel = React.useRef(null);
   const fiction = data.filter((item) => item.category === "fiction");
 
