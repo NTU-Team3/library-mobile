@@ -10,6 +10,8 @@ const ProfileScreen = (navigation) => {
   );
 };
 
+test;
+
 export default ProfileScreen;
 
 const styles = StyleSheet.create({
