@@ -16,6 +16,7 @@ export default function HomeScreen() {
   const greeting = "Greetings, Charline";
   const [curList, setList] = React.useState(political);
   const [category, setCategory] = React.useState("political");
+  const [chipIdx, setChipIdx] = React.useState(0);
 
   function filter(catName) {
     const category = catName.toLowerCase();
@@ -42,12 +43,13 @@ export default function HomeScreen() {
 
         break;
     }
+    setChipIdx(0);
   }
   return (
     <Screen>
       <SearchBar />
       <Greeting>{greeting}</Greeting>
-      <ChipButtons select={category} onChange={filter} />
+      <ChipButtons select={category} onChange={filter} ind={chipIdx} />
       <CarouselCards data={curList} />
     </Screen>
   );

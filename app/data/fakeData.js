@@ -161,4 +161,36 @@ export default [
       "http://books.google.com/books/content?id=x5JrBQ4bfLsC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
     category: "fiction",
   },
+  {
+    id: "21",
+    title: "The Outsiders",
+    desc: "The Socs's idea of having a good time is beating up Greasers like Ponyboy, the rough, tough, long-ha...",
+    thumbnail:
+      "http://books.google.com/books/content?id=LOnpPwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
+    category: "psychology",
+  },
+  {
+    id: "22",
+    title: "Cut",
+    desc: "Fifteen-year old Callie is so withdrawn that she's not speaking to anyone - including her therapist ...",
+    thumbnail:
+      "http://books.google.com/books/content?id=Q140Mlie138C&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
+    category: "psychology",
+  },
+  {
+    id: "23",
+    title: "Naked Lunch",
+    desc: "The anarchic, phenomenally strong-selling classic from the godfather of the Beats: revitalised with ...",
+    thumbnail:
+      "http://books.google.com/books/content?id=1B36S7t4k5AC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
+    category: "psychology",
+  },
+  {
+    id: "24",
+    title: "Mars and Venus Book of Days",
+    desc: "Provides daily reminders of the differences in behavior and communication styles of men and women",
+    thumbnail:
+      "http://books.google.com/books/content?id=kd6YGT74stsC&printsec=frontcover&img=1&zoom=1&source=gbs_ap...",
+    category: "psychology",
+  },
 ];
