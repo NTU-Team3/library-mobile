@@ -1,8 +1,8 @@
 import React from 'react';
-import VerticalList from './VerticalList';
+import VerticalList2 from './VerticalList2';
 
 const FullList = ({ data }) => {
-  return <VerticalList data={data} />;
+  return <VerticalList2 data={data} />;
 };
 
 export default FullList;

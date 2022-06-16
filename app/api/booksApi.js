@@ -5,7 +5,7 @@ const getAll = async () => {
     const response = await apiClient.get("/books");
 
     if (response.data.success) {
-      return response.data.news;
+      return response.data.books;
     }
   } catch (error) {
     console.log("Error while getting all books.", error.message);
@@ -18,7 +18,7 @@ const getSingle = async (id) => {
     const response = await apiClient.get(`/books/single/${id}`);
 
     if (response.data.success) {
-      return response.data.news;
+      return response.data.books;
     }
   } catch (error) {
     console.log("error while getting single book", error);
@@ -26,7 +26,7 @@ const getSingle = async (id) => {
 };
 
 const getByCategory = async (category, qty) => {
-  const endpoint = qty ? `/books/${category}/${qty}` : `/news/${category}`;
+  const endpoint = qty ? `/books/${category}/${qty}` : `/books/${category}`;
 
   try {
     const response = await apiClient.get(endpoint);
