@@ -1,33 +1,42 @@
-import React from "react";
-import { Dimensions, StyleSheet, Image, View, Text, Alert } from "react-native";
+import React, { useState } from "react";
+import { Dimensions, useWindowDimensions, StyleSheet, Image, View, Text, Alert } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import dataBook from "../../data/fakeDataBook-ikoh";
-import bookImg from "../../../assets/book-covers/bcover_01.jpg";
+import bookImg from "../../../assets/book-covers/bcover001.jpg";
+// import bookImg from "../../../assets/book-covers/defaultcover.png";
 
-export default function ReadItemScreenImg() {
+export default function ReadItemScreenImg({ navigation }) {
   const winWidth = Dimensions.get("window").width;
-  const winHeight = Dimensions.get("window").height;
 
-  const bookTitle = dataBook[1].title;
-  const bookAuthor = dataBook[1].author;
-  const bookKeyInfo = dataBook[1].keyinfo;
+  const [imgPath, setImgPath] = useState(dataBook[1].imgpath);
+  const [title, setTitle] = useState(dataBook[1].title);
+  const [author, setAuthor] = useState(dataBook[1].author);
+  const [gist, setGist] = useState(dataBook[1].gist);
 
-  const backBtnPress = () => {
-    Alert.alert(`Read Item - Back`);
+  const pressBack = () => {
+    // navigation.goBack();
+    Alert.alert("Back", "Go back to Read List page.", [{ text: "Accept", onPress: () => console.log("Back button closed.") }]);
   };
+
+  // const [name, setName] = useState("abc");
+  // const pressHandler = () => {
+  //   setName("123");
+  // };
 
   return (
     <View style={styles.divTop}>
-      <Image style={styles.img} source={bookImg} />
-      <Ionicons style={styles.btnBack} name={"arrow-back-circle"} size={winWidth / 8} color={"#222831"} onPress={backBtnPress} />
+      <View style={styles.divImg}>
+        <Image style={styles.img} source={bookImg} />
+      </View>
+      <Ionicons style={styles.btnBack} name={"arrow-back-circle"} size={winWidth / 8} color={"#222831"} onPress={pressBack} />
 
       <View style={styles.divHeader}>
-        <Text style={styles.txtTitle}>{bookTitle}</Text>
+        <Text style={styles.txtTitle}>{title}</Text>
         <Text style={styles.txtKeyInfo}>
-          {bookAuthor}
+          {author}
           {"\n"}
         </Text>
-        <Text style={styles.txtKeyInfo}>{bookKeyInfo}</Text>
+        <Text style={styles.txtKeyInfo}>{gist}</Text>
       </View>
     </View>
   );
@@ -36,39 +45,46 @@ export default function ReadItemScreenImg() {
 const styles = StyleSheet.create({
   divTop: {
     flexDirection: "row",
-    width: "100%",
-    marginTop: 0,
+    marginBottom: "-12%",
     backgroundColor: "#FFFFFF",
   },
 
-  img: {
-    alignSelf: "center",
+  divImg: {
+    flex: 1,
+  },
 
+  img: {
+    marginTop: "15%",
+    marginLeft: "15%",
+    alignSelf: "center",
+    resizeMode: "contain",
+    width: "65%",
     zIndex: 1,
   },
 
   divHeader: {
-    width: "100%",
-    paddingLeft: "8%",
-    padding: "3.5%",
+    lineHeight: 100,
+    width: "55%",
+    paddingTop: "40%",
+    paddingLeft: "3%",
     opacity: 1,
-    zIndex: 2,
   },
 
   btnBack: {
     position: "absolute",
-    marginTop: "11%",
+    marginTop: "9%",
     marginLeft: "7%",
     zIndex: 2,
   },
 
   txtTitle: {
     // fontFamily: "Arsenal_700Bold",
-    fontSize: 20,
+    fontWeight: "bold",
+    fontSize: 16,
   },
 
   txtKeyInfo: {
     // fontFamily: "Arsenal_400Regular",
-    fontSize: 16,
+    fontSize: 12,
   },
 });

@@ -3,8 +3,8 @@ import { StyleSheet, TouchableOpacity, Text, View, Alert } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function BookScreenNav() {
-  const reviewsBtnPress = () => {
-    Alert.alert(`Reviews`);
+  const pressReviews = () => {
+    Alert.alert("Reviews", "Load all reviews", [{ text: "Accept", onPress: () => console.log("Reviews button closed.") }]);
   };
 
   return (
@@ -13,7 +13,7 @@ export default function BookScreenNav() {
         <Text style={styles.txtLinks}>&nbsp;&nbsp;&nbsp;Synopsis</Text>
       </Ionicons>
       <Text>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
-      <TouchableOpacity activeOpacity={0.5} onPress={reviewsBtnPress}>
+      <TouchableOpacity activeOpacity={0.5} onPress={pressReviews}>
         <Ionicons name={"md-star-outline"} size={14} color={"#FFCE45"}>
           <Text style={styles.txtLinks}>&nbsp;&nbsp;&nbsp;Reviews</Text>
         </Ionicons>
@@ -25,12 +25,12 @@ export default function BookScreenNav() {
 const styles = StyleSheet.create({
   linksDiv: {
     flexDirection: "row",
-    justifyContent: "flex-start",
-    paddingLeft: "8%",
-    padding: "5.5%",
+    paddingHorizontal: "9%",
+    paddingVertical: "5.5%",
+    paddingBottom: "4.75%",
     backgroundColor: "#222831",
     borderBottomWidth: 0.5,
-    borderBottomColor: "#EEEEEE",
+    borderColor: "rgba(238, 238, 238, 0.5)",
   },
 
   txtLinks: {
