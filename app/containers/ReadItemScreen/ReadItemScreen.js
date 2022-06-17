@@ -1,27 +1,20 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, View } from "react-native";
+import { StyleSheet, ScrollView } from "react-native";
 import ReadItemScreenImg from "./ReadItemScreen-img";
 import ReadItemScreenSummary from "./ReadItemScreen-summary";
 
-export default function ReadItemScreen() {
+export default function ReadItemScreen({ navigation }) {
   return (
-    <SafeAreaView style={styles.safearea}>
-      <View style={styles.container}>
-        <ReadItemScreenImg />
-        <ReadItemScreenSummary />
-      </View>
-    </SafeAreaView>
+    <ScrollView style={styles.container}>
+      <ReadItemScreenImg />
+      <ReadItemScreenSummary />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  safearea: {
-    flex: 1,
-  },
-
   container: {
-    width: "100%",
-    height: "100%",
+    flex: 1,
     backgroundColor: "#222831",
   },
 });
