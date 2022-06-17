@@ -9,13 +9,13 @@ export default function ListIcon({ funct }) {
       }}
       style={styles.container}
     >
-    <Image
+      <Image
         source={require("../../assets/3lines.png")}
         style={{
-          width: 15,
-          height: 15,
+          width: 40,
+          height: 55,
           resizeMode: "cover",
-          tintColor: "lightgrey",
+          tintColor: "black",
         }}
       />
     </TouchableOpacity>

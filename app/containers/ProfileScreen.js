@@ -1,6 +1,6 @@
 import { SafeAreaView, StyleSheet, Text, View, Button } from "react-native";
 import React from "react";
-import { Avatar, Title, Caption, TouchableRipple } from "react-native-paper";
+import { Title, Caption, TouchableRipple } from "react-native-paper";
 import ArrowIcon from "react-native-vector-icons/Entypo";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -11,8 +11,8 @@ const ProfileScreen = (navigation) => {
       {/* <View style={styles.body}> */}
       <Text style={styles.header}>Profile</Text>
       <View style={styles.userInfoSection}>
-        <View style={styles.Avatar}>
-          <Avatar.Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3T0LOSWkny0uZHiHf18EYEQ80Wa3PEkQbQw&usqp=CAU" }} size={100} />
+        <View>
+          <Text style={styles.header}>kdhaklsdkl</Text>
         </View>
         <View style={styles.middleSection}>
           <Title style={styles.title}>Charline</Title>
@@ -27,25 +27,45 @@ const ProfileScreen = (navigation) => {
           <TouchableRipple onPress={() => alert("On Loan page")}>
             <View style={styles.menuItem}>
               <Text style={styles.menuItemText}>On Loan</Text>
-              <ArrowIcon name="chevron-small-down" color="white" size={25} marginBottom={100} />
+              <ArrowIcon
+                name="chevron-small-down"
+                color="white"
+                size={25}
+                marginBottom={100}
+              />
             </View>
           </TouchableRipple>
           <TouchableRipple onPress={() => alert("Reservation page")}>
             <View style={styles.menuItem}>
               <Text style={styles.menuItemText}>Reservation</Text>
-              <ArrowIcon name="chevron-small-down" color="white" size={25} marginBottom={100} />
+              <ArrowIcon
+                name="chevron-small-down"
+                color="white"
+                size={25}
+                marginBottom={100}
+              />
             </View>
           </TouchableRipple>
           <TouchableRipple onPress={() => alert("History page")}>
             <View style={styles.menuItem}>
               <Text style={styles.menuItemText}>History</Text>
-              <ArrowIcon name="chevron-small-down" color="white" size={25} marginBottom={100} />
+              <ArrowIcon
+                name="chevron-small-down"
+                color="white"
+                size={25}
+                marginBottom={100}
+              />
             </View>
           </TouchableRipple>
           <TouchableRipple onPress={() => alert("Reviews page")}>
             <View style={styles.menuItem}>
               <Text style={styles.menuItemText}>Reviews</Text>
-              <ArrowIcon name="chevron-small-down" color="white" size={25} marginBottom={100} />
+              <ArrowIcon
+                name="chevron-small-down"
+                color="white"
+                size={25}
+                marginBottom={100}
+              />
             </View>
           </TouchableRipple>
           <TouchableRipple onPress={() => alert("Edit profile page")}>
@@ -68,7 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   header: {
-    fontSize: "40px",
+    fontSize: 40,
     marginTop: 40,
     marginLeft: 50,
   },
@@ -79,14 +99,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginTop: 50,
   },
-  Avatar: {
-    marginTop: -60,
-    marginLeft: 30,
-    fontSize: 100,
-    padding: 20,
-  },
+
   title: {
-    fontStyle: "inter",
     marginLeft: 20,
   },
   middleSection: {
@@ -115,7 +129,7 @@ const styles = StyleSheet.create({
   },
   menuItemText: {
     flex: 1,
-    justifyContent: "space between",
+    justifyContent: "space-between",
   },
   version: {
     marginLeft: 10,

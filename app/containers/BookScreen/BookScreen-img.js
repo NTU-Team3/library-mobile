@@ -3,7 +3,7 @@ import { Dimensions, StyleSheet, Image, View, Text, Alert } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import dataBook from "../../data/fakeDataBook-ikoh";
 // import bookImg from "../../../assets/book-covers/defaultcover.png";
-import bookImg from "../../../assets/book-covers/bcover001.jpg";
+import bookImg from "../../../assets/book-covers/bcover_01.jpg";
 
 export default function BookScreenImg({ navigation }) {
   const winWidth = Dimensions.get("window").width;
@@ -15,14 +15,22 @@ export default function BookScreenImg({ navigation }) {
 
   const pressBack = () => {
     // navigation.goBack();
-    Alert.alert("Back", "Go back to Catalog page.", [{ text: "Accept", onPress: () => console.log("Back button closed.") }]);
+    Alert.alert("Back", "Go back to Catalog page.", [
+      { text: "Accept", onPress: () => console.log("Back button closed.") },
+    ]);
   };
 
   return (
     <View>
       <View style={styles.divImg}>
         <Image style={styles.img} source={bookImg} />
-        <Ionicons style={styles.btnBack} name={"arrow-back-circle"} size={winWidth / 8} color={"#222831"} onPress={pressBack} />
+        <Ionicons
+          style={styles.btnBack}
+          name={"arrow-back-circle"}
+          size={winWidth / 8}
+          color={"#222831"}
+          onPress={pressBack}
+        />
       </View>
       <View style={styles.divHeader}>
         <Text style={styles.txtTitle}>{book.title}</Text>

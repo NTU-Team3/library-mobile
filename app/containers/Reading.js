@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
 import React, { useState } from "react";
-import SearchBar from "./SearchBar";
+import SearchBar from "../components/SearchBar";
 import Screen from "./Screen";
 import data from "../data/fakeData";
-import FullList from "./FullList";
-import GridList from "./GridList";
-import GridIcon from "./GridIcon";
-import ListIcon from "./ListIcon";
+import FullList from "../components/FullList";
+import GridList from "../components/GridList";
+import GridIcon from "../components/GridIcon";
+import ListIcon from "../components//ListIcon";
 import { TouchableHighlight, TouchableOpacity } from "react-native-web";
 
 const ReadingScreen = (navigation) => {

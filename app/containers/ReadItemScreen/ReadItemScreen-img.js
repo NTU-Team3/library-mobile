@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import { Dimensions, useWindowDimensions, StyleSheet, Image, View, Text, Alert } from "react-native";
+import {
+  Dimensions,
+  useWindowDimensions,
+  StyleSheet,
+  Image,
+  View,
+  Text,
+  Alert,
+} from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import dataBook from "../../data/fakeDataBook-ikoh";
-import bookImg from "../../../assets/book-covers/bcover001.jpg";
+import bookImg from "../../../assets/book-covers/bcover_01.jpg";
 // import bookImg from "../../../assets/book-covers/defaultcover.png";
 
 export default function ReadItemScreenImg({ navigation }) {
@@ -15,7 +23,9 @@ export default function ReadItemScreenImg({ navigation }) {
 
   const pressBack = () => {
     // navigation.goBack();
-    Alert.alert("Back", "Go back to Read List page.", [{ text: "Accept", onPress: () => console.log("Back button closed.") }]);
+    Alert.alert("Back", "Go back to Read List page.", [
+      { text: "Accept", onPress: () => console.log("Back button closed.") },
+    ]);
   };
 
   // const [name, setName] = useState("abc");
@@ -28,7 +38,13 @@ export default function ReadItemScreenImg({ navigation }) {
       <View style={styles.divImg}>
         <Image style={styles.img} source={bookImg} />
       </View>
-      <Ionicons style={styles.btnBack} name={"arrow-back-circle"} size={winWidth / 8} color={"#222831"} onPress={pressBack} />
+      <Ionicons
+        style={styles.btnBack}
+        name={"arrow-back-circle"}
+        size={winWidth / 8}
+        color={"#222831"}
+        onPress={pressBack}
+      />
 
       <View style={styles.divHeader}>
         <Text style={styles.txtTitle}>{title}</Text>

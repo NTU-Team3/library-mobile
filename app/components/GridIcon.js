@@ -10,12 +10,12 @@ export default function GridIcon({ funct }) {
       style={styles.container}
     >
       <Image
-        source={require("../../assets/3lines.png")}
+        source={require("../../assets/grid.png")}
         style={{
-          width: 15,
-          height: 15,
+          width: 25,
+          height: 25,
           resizeMode: "cover",
-          tintColor: "lightgrey",
+          tintColor: "black",
         }}
       />
     </TouchableOpacity>
