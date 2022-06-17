@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFCE45",
     borderRadius: 8,
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 20,
   },
   searchInput: {
     width: "100%",

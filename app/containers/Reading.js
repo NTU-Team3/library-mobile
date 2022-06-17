@@ -1,22 +1,73 @@
-import { StyleSheet, Text, View, Button } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View, Button, TextInput, Image } from "react-native";
+import React, { useState } from "react";
+import SearchBar from "./SearchBar";
+import Screen from "./Screen";
+import data from "../data/fakeData";
+import FullList from "./FullList";
+import GridList from "./GridList";
+import GridIcon from "./GridIcon";
+import ListIcon from "./ListIcon";
+import { TouchableHighlight, TouchableOpacity } from "react-native-web";
 
 const ReadingScreen = (navigation) => {
+  const [value, setValue] = useState();
+  const [gridView, setgridView] = React.useState("GridIcon");
+
+  function updateSearch(value) {
+    console.log("abc");
+  }
+  function updateView(string) {
+    setgridView(string);
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>List of current books I am reading </Text>
-      <Button title="Click Here" onPress={() => alert("button clicked!")} />
-    </View>
+    <Screen>
+      <SearchBar value={value} updateSearch={updateSearch} style={{}} />
+      <View style={styles.container}>
+        <View style={styles.searchbar}>
+          <TextInput style={styles.searchInput} placeholder="Read List" />
+          <GridIcon funct={updateView} />
+          <ListIcon funct={updateView} />
+        </View>
+      </View>
+      {gridView === "GridIcon" ? (
+        <GridList data={data} />
+      ) : (
+        <FullList data={data} />
+      )}
+    </Screen>
   );
 };
 
-export default ReadingScreen;
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
+    width: "100%",
+    height: 40,
     backgroundColor: "white",
+    borderRadius: 8,
+    justifyContent: "center",
+    marginTop: 10,
+  },
+  searchInput: {
+    width: "80%",
+    height: "100%",
+    fontSize: 25,
+    justifyContent: "flex-start",
+  },
+  searchbar: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+  },
+  button: {
+    backgroundColor: "#859a9b",
+    borderRadius: 20,
+    padding: 10,
+    marginBottom: 20,
+    shadowColor: "#303838",
+    shadowOffset: { width: 0, height: 5 },
+    shadowRadius: 10,
+    shadowOpacity: 0.35,
   },
 });
+
+export default ReadingScreen;
