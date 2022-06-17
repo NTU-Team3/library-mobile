@@ -3,42 +3,38 @@ import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import Screen from "./Screen";
 import data from "../data/fakeData";
-import FlatCard from "./FlatCard";
 import FullList from "./FullList";
 import GridList from "./GridList";
-import ToggleGrid from "./ToggleGrid";
 import GridIcon from "./GridIcon";
 import ListIcon from "./ListIcon";
 import { TouchableHighlight, TouchableOpacity } from "react-native-web";
 
 const ReadingScreen = (navigation) => {
-    const [value, setValue] = useState()
-    const [gridView, setgridView] = React.useState("GridList");
+  const [value, setValue] = useState();
+  const [gridView, setgridView] = React.useState("GridIcon");
 
-    function updateSearch(value) {
-      console.log(value)
-    }
+  function updateSearch(value) {
+    console.log("abc");
+  }
+  function updateView(string) {
+    setgridView(string);
+  }
 
-
-
-    return (
+  return (
     <Screen>
-      <SearchBar
-      value={value}
-      updateSearch={updateSearch}
-      style={{}}
-      />
+      <SearchBar value={value} updateSearch={updateSearch} style={{}} />
       <View style={styles.container}>
-      <View style={styles.searchbar}>
-        <TextInput style={styles.searchInput} placeholder="Read List" />         
-          
-        <TouchableOpacity style={styles.button} onPress={() => setgridView("FullList")}><GridIcon /></TouchableOpacity>
-
-        <TouchableOpacity style={styles.button} onPress={() => setgridView("FullList")}><ListIcon /></TouchableOpacity>
+        <View style={styles.searchbar}>
+          <TextInput style={styles.searchInput} placeholder="Read List" />
+          <GridIcon funct={updateView} />
+          <ListIcon funct={updateView} />
+        </View>
       </View>
-    </View>
-      {gridView === ("GridList") ? <FullList data={data}/> : <GridList data={data}/>
-}
+      {gridView === "GridIcon" ? (
+        <GridList data={data} />
+      ) : (
+        <FullList data={data} />
+      )}
     </Screen>
   );
 };
@@ -63,11 +59,11 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   button: {
-    backgroundColor: '#859a9b',
+    backgroundColor: "#859a9b",
     borderRadius: 20,
     padding: 10,
     marginBottom: 20,
-    shadowColor: '#303838',
+    shadowColor: "#303838",
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 10,
     shadowOpacity: 0.35,
