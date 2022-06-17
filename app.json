@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/undraw_Reading_time_re_phf7.png",
       "resizeMode": "cover",
-      "backgroundColor": "EEEEEE"
+      "backgroundColor": "#EEEEEE"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

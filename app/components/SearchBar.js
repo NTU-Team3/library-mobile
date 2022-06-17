@@ -6,7 +6,7 @@ const SearchBar = () => {
     <View style={styles.container}>
       <View style={styles.searchbar}>
         <Image
-          source={require("../../assets/home.png")}
+          source={require("../../assets/search.png")}
           style={{ width: 20, height: 20, tintColor: "white" }}
         />
 
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFCE45",
     borderRadius: 8,
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 20,
   },
   searchInput: {
     width: "100%",

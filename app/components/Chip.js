@@ -6,7 +6,7 @@ const filterList = ["Political", "Technology", "Fiction", "Psychology"];
 const FONT_SIZE = 22;
 
 const ChipButtons = ({ select, onChange }) => {
-  const [category, setCategory] = React.useState("fiction");
+  const [category, setCategory] = React.useState("Political");
 
   function selChange(sel) {
     /*console.log(sel);*/
@@ -21,8 +21,11 @@ const ChipButtons = ({ select, onChange }) => {
         <Chip
           key={item}
           mode="outlined"
-          onPress={() => onChange(item)}
-          style={styles.chip}
+          onPress={() => {
+            onChange(item);
+            setCategory(item);
+          }}
+          style={category == item ? styles.chipActive : styles.chip}
           textStyle={{ fontSize: FONT_SIZE }}
         >
           {item}
@@ -41,7 +44,15 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     justifyContent: "center",
     textAlign: "center",
-    fontFamily: "Verdana",
+  },
+  chipActive: {
+    width: 160,
+    marginLeft: 5,
+    marginBottom: 5,
+    justifyContent: "center",
+    textAlign: "center",
+    textcolor: "white",
+    backgroundColor: "#CBCBCB",
   },
   row: {
     marginTop: 2,
