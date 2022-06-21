@@ -3,7 +3,7 @@ import { View, StyleSheet, Alert } from "react-native";
 import { Chip } from "react-native-paper";
 
 const filterList = ["Political", "Technology", "Fiction", "Psychology"];
-const FONT_SIZE = 22;
+const FONT_SIZE = 12;
 
 const ChipButtons = ({ select, onChange }) => {
   const [category, setCategory] = React.useState("Political");
@@ -20,7 +20,7 @@ const ChipButtons = ({ select, onChange }) => {
       {filterList.map((item) => (
         <Chip
           key={item}
-          mode="outlined"
+          mode="flat"
           onPress={() => {
             onChange(item);
             setCategory(item);
@@ -39,25 +39,28 @@ export default ChipButtons;
 
 const styles = StyleSheet.create({
   chip: {
-    width: 160,
     marginLeft: 5,
     marginBottom: 5,
     justifyContent: "center",
     textAlign: "center",
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   chipActive: {
-    width: 160,
     marginLeft: 5,
     marginBottom: 5,
+    paddingLeft: 5,
+    paddingRight: 5,
     justifyContent: "center",
     textAlign: "center",
     textcolor: "white",
-    backgroundColor: "#CBCBCB",
+    borderColor: "rgba(57, 62, 70, 1)",
+    borderStyle: "Solid",
+    borderWidth: 0.5,
   },
   row: {
     marginTop: 2,
     flexDirection: "row",
-    flexWrap: "wrap",
-    paddingHorizontal: 12,
+    alignItems: "center",
   },
 });

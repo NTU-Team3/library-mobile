@@ -11,18 +11,36 @@ const ProfileScreen = (navigation) => {
       {/* <View style={styles.body}> */}
       <Text style={styles.header}>Profile</Text>
       <View style={styles.userInfoSection}>
-        <View>
-          <Text style={styles.header}>kdhaklsdkl</Text>
+        <View style={styles.profile}>
+          <Text style={styles.profile_text}>CT</Text>
         </View>
         <View style={styles.middleSection}>
-          <Title style={styles.title}>Charline</Title>
-          <Caption style={styles.title}>
-            <Icon name="map-marker-radius" size={20} color="#CBCBCB" /> Portugal
-          </Caption>
+          <View>
+            <Title style={styles.name}>Charline Taine</Title>
+          </View>
+          <View>
+            <Caption style={styles.title}>
+              <Icon name="map-marker-radius" size={20} color="#CBCBCB" />{" "}
+              Portugal
+            </Caption>
+          </View>
         </View>
       </View>
 
       <View style={styles.userInfoSectionBottom}>
+        <View
+          style={[
+            styles.triangle,
+            {
+              transform: [
+                { rotateX: "20deg" },
+                { rotateY: "-30deg" },
+                { translateX: -20 },
+                { translateY: -20 },
+              ],
+            },
+          ]}
+        ></View>
         <View>
           <TouchableRipple onPress={() => alert("On Loan page")}>
             <View style={styles.menuItem}>
@@ -82,39 +100,42 @@ const ProfileScreen = (navigation) => {
 };
 
 const styles = StyleSheet.create({
+  triangle: {
+    height: 30,
+    width: 180,
+    backgroundColor: "white",
+  },
   container: {
     flex: 1,
     borderColor: "blue",
     backgroundColor: "white",
   },
   header: {
-    fontSize: 40,
-    marginTop: 40,
+    fontSize: 30,
+    marginTop: 20,
     marginLeft: 50,
   },
   userInfoSection: {
     backgroundColor: "white",
     borderColor: "red",
-    flex: 0.5,
+    alignItems: "center",
     flexDirection: "row",
-    marginTop: 50,
+    marginTop: 0,
   },
 
   title: {
     marginLeft: 20,
   },
   middleSection: {
-    position: "absolute",
-    left: 180,
-    bottom: -40,
+    flexDirection: "column",
   },
   userInfoSectionBottom: {
     backgroundColor: "#FFCE45",
-    marginTop: 80,
+    marginTop: 30,
   },
   menuItem: {
     flexDirection: "row",
-    paddingVertical: 30,
+    paddingVertical: 20,
     paddingHorizontal: 30,
     borderBottomColor: "white",
     borderBottomWidth: 1,
@@ -125,7 +146,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     paddingVertical: 30,
     paddingHorizontal: 30,
-    marginBottom: 20,
   },
   menuItemText: {
     flex: 1,
@@ -134,7 +154,24 @@ const styles = StyleSheet.create({
   version: {
     marginLeft: 10,
     paddingBottom: 60,
-    paddingTop: 20,
+  },
+  profile: {
+    width: 88,
+    height: 88,
+    borderRadius: 44,
+    backgroundColor: "rgba(255, 206, 69, 1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: 45,
+    marginRight: 20,
+    marginTop: 10,
+  },
+  profile_text: {
+    fontSize: 45,
+    color: "white",
+  },
+  name: {
+    fontSize: 20,
   },
 });
 

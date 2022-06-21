@@ -2,13 +2,15 @@ import React from "react";
 import { View, StyleSheet, StatusBar, ScrollView } from "react-native";
 
 const Screen = ({ children }) => {
-  return <ScrollView style={styles.container}>{children}</ScrollView>;
+  return <View style={styles.container}>{children}</View>;
 };
 
 const styles = StyleSheet.create({
   container: {
     marginTop: StatusBar.currentHeight,
-    paddingHorizontal: 15,
+    marginLeft: 15,
+    marginRight: 15,
+    alignItems: "center",
     backgroundColor: "#FFFFFF",
     flex: 1,
   },

@@ -5,7 +5,7 @@ import Screen from "./Screen";
 import data from "../data/fakeData";
 import Greeting from "../components/Greetings";
 import ChipButtons from "../components/Chip";
-import CarouselCards from "../components/CarouselCards";
+import Carousel from "../components/Carousel_v2/Carousel";
 
 export default function HomeScreen() {
   const psychology = data.filter((item) => item.category === "psychology");
@@ -20,7 +20,6 @@ export default function HomeScreen() {
 
   function filter(catName) {
     const category = catName.toLowerCase();
-    console.log(`filter function at homescreen: ${category}`);
 
     switch (category) {
       case "political":
@@ -50,7 +49,7 @@ export default function HomeScreen() {
       <SearchBar />
       <Greeting>{greeting}</Greeting>
       <ChipButtons select={category} onChange={filter} ind={chipIdx} />
-      <CarouselCards data={curList} />
+      <Carousel data={curList} />
     </Screen>
   );
 }
