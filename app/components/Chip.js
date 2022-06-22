@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     paddingLeft: 5,
     paddingRight: 5,
+    backgroundColor: "white",
   },
   chipActive: {
     marginLeft: 5,
@@ -57,6 +58,7 @@ const styles = StyleSheet.create({
     borderColor: "rgba(57, 62, 70, 1)",
     borderStyle: "Solid",
     borderWidth: 0.5,
+    backgroundColor: "white",
   },
   row: {
     marginTop: 2,

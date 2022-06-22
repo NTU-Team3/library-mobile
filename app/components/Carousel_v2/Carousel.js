@@ -7,6 +7,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
+import ArrowIcon from "react-native-vector-icons/Entypo";
 import React from "react";
 import Pagination from "./Pagination";
 
@@ -46,6 +47,12 @@ const Carousel = (data) => {
         <Pagination length={data.data.length} page={activePage}></Pagination>
       </View>
       <Text style={styles.bookTitle}>{data.data[activePage + 1].title}</Text>
+      <View style={styles.dropDown}>
+        <Text style={styles.bookDue}>Books Due</Text>
+        <TouchableOpacity>
+          <ArrowIcon name="chevron-small-left" style={styles.arrow} size={25} />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -85,5 +92,19 @@ const styles = StyleSheet.create({
   },
   bookTitle: {
     textAlign: "center",
+  },
+  bookDue: {
+    margin: 30,
+    marginLeft: 40,
+    fontSize: 20,
+  },
+  dropDown: {
+    alignItems: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  arrow: {
+    color: "black",
+    margin: 25,
   },
 });

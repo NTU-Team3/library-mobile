@@ -33,6 +33,9 @@ const allScreens = {
 
   HomeScreen: {
     screen: Home,
+    navigationOptions: {
+      headerShown: false,
+    },
   },
 
   //   CatalogScreen: {
